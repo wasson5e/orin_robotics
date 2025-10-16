@@ -42,3 +42,8 @@ python train.py --weights yolov5s.pt --data /Users/awasson/Documents/GitLab/yolo
 - [YOLO Modes](https://docs.ultralytics.com/modes)
 - [Ultralytics Main Repo](https://github.com/ultralytics/ultralytics)
 - [Yolo Performance Metrics](https://docs.ultralytics.com/guides/yolo-performance-metrics)
+
+
+## Test out the model
+```
+```
