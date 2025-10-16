@@ -11,7 +11,7 @@ from ultralytics.utils import LOGGER
 from ultralytics.utils.plotting import Annotator, colors
 
 enable_gpu = False  # Set True if running with CUDA
-model_file = "/Users/awasson/Documents/GitLab/orin-robotics/runs/detect/train3/weights/best.pt"  # Path to model file
+model_file = "/Users/awasson/Documents/GitLab/orin-robotics/YOLO/foundation models/runs/detect/train9/weights/best.pt"  # Path to model file
 show_fps = True  # If True, shows current FPS in top-left corner
 show_conf = True  # Display or hide the confidence score
 save_video = False  # Set True to save output video
