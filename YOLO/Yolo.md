@@ -1,6 +1,14 @@
 # YOLO
 - Trying to build out a custom YOLO model that will include people/animals for use at the house
 
+## Links
+- [YOLOv11](https://docs.ultralytics.com/models/yolo11)
+- [YOLO OBB](https://docs.ultralytics.com/tasks/obb/)
+- [YOLO Modes](https://docs.ultralytics.com/modes)
+- [Ultralytics Main Repo](https://github.com/ultralytics/ultralytics)
+- [Yolo Performance Metrics](https://docs.ultralytics.com/guides/yolo-performance-metrics)
+- [YOLOv11 Backbone information](https://github.com/orgs/ultralytics/discussions/20876)
+
 ## Yolov11 Infrastructure
 | Variant | Backbone Modules | Backbone Layers | Neck Modules | Neck Layers | Head Modules | Head Layers | Total Layers |
 | -------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
@@ -13,15 +21,9 @@
 conda activate yolo
 ```
 
-## Label Studio
-```
-label-studio
-```
-
-# Reference information
+## Reference information
 - ejtech.io/learn/train-yolo-models
 - github.com/ultralytics
-- labelstud.io/guide
 - github.com/HumanSignal/label-studio
 - docs.ultralytics.com/guies/data-collection-and-annotation
 - [Yolo Webcam](https://github.com/nudro/yolo-webcam/blob/main/webcam_detection.py)
@@ -98,14 +100,6 @@ python train.py --weights yolov5s.pt --data /Users/awasson/Documents/GitLab/yolo
 | val | bool | True | Enables validation during training, allowing for periodic evaluation of model performance on a separate dataset. |
 | plots | bool | False | Generates and saves plots of training and validation metrics, as well as prediction examples, providing visual insights into model performance and learning progression. |
 | compile | bool or str | False | Enables PyTorch 2.x torch.compile graph compilation with backend='inductor'. Accepts True → "default", False → disables, or a string mode such as "default", "reduce-overhead", "max-autotune-no-cudagraphs". Falls back to eager with a warning if unsupported. |
-
-## Links
-- [YOLOv11](https://docs.ultralytics.com/models/yolo11)
-- [YOLO OBB](https://docs.ultralytics.com/tasks/obb/)
-- [YOLO Modes](https://docs.ultralytics.com/modes)
-- [Ultralytics Main Repo](https://github.com/ultralytics/ultralytics)
-- [Yolo Performance Metrics](https://docs.ultralytics.com/guides/yolo-performance-metrics)
-- [YOLOv11 Backbone information](https://github.com/orgs/ultralytics/discussions/20876)
 
 
 ## Test out the model
