@@ -30,6 +30,9 @@ label-studio
 - [opencv](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
 
 ## Training with an established model
+[YOLO Training](https://docs.ultralytics.com/modes/train)
+[MPS Training](https://docs.ultralytics.com/modes/train/#apple-silicon-mps-training)
+[PyTorch MPS](https://docs.pytorch.org/docs/stable/notes/mps.html)
 ```
 # Example: Train YOLOv5s on the COCO128 dataset for 3 epochs
 python train.py --img 640 --batch 16 --epochs 3 --data coco128.yaml --weights yolov5s.pt
