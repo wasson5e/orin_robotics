@@ -18,6 +18,7 @@ label-studio
 - labelstud.io/guide
 - github.com/HumanSignal/label-studio
 - docs.ultralytics.com/guies/data-collection-and-annotation
+- [Yolo Webcam](https://github.com/nudro/yolo-webcam/blob/main/webcam_detection.py)
 
 ## Background information
 - [opencv](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
@@ -34,3 +35,10 @@ python train.py --img 640 --batch 16 --epochs 3 --data coco128.yaml --weights yo
 ```
 python train.py --weights yolov5s.pt --data /Users/awasson/Documents/GitLab/yolo/data.yaml --freeze 10 --batch 16
 ```
+
+## Links
+- [YOLOv11](https://docs.ultralytics.com/models/yolo11)
+- [YOLO OBB](https://docs.ultralytics.com/tasks/obb/)
+- [YOLO Modes](https://docs.ultralytics.com/modes)
+- [Ultralytics Main Repo](https://github.com/ultralytics/ultralytics)
+- [Yolo Performance Metrics](https://docs.ultralytics.com/guides/yolo-performance-metrics)
