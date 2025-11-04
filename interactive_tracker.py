@@ -11,7 +11,8 @@ from ultralytics.utils import LOGGER
 from ultralytics.utils.plotting import Annotator, colors
 
 enable_gpu = False  # Set True if running with CUDA
-model_file = "/Users/awasson/Documents/GitLab/orin-robotics/YOLO/foundation models/runs/detect/train11/weights/best.pt"  # Path to model file
+#odel_file = "/yolo/yolo11s.engine"  # Path to model file
+model_file = "/Volumes/Extreme SSD/coco128/runs/detect/train/weights/last.pt"
 show_fps = True  # If True, shows current FPS in top-left corner
 show_conf = True  # Display or hide the confidence score
 save_video = False  # Set True to save output video
@@ -42,6 +43,7 @@ else:
 classes = model.names  # Store model class names
 
 cap = cv2.VideoCapture(0)  # Replace with video path if needed
+#0 is using the iphone - for some odd reason
 
 # Initialize video writer
 vw = None
