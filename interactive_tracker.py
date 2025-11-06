@@ -12,7 +12,7 @@ from ultralytics.utils.plotting import Annotator, colors
 
 enable_gpu = False  # Set True if running with CUDA
 #odel_file = "/yolo/yolo11s.engine"  # Path to model file
-model_file = "/Volumes/Extreme SSD/coco128/runs/detect/train/weights/last.pt"
+model_file = "/Users/awasson/Documents/GitLab/orin-robotics/Working Model/yolo11n_trained.pt"
 show_fps = True  # If True, shows current FPS in top-left corner
 show_conf = True  # Display or hide the confidence score
 save_video = False  # Set True to save output video
