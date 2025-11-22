@@ -45,3 +45,6 @@ ioctl: VIDIOC_ENUM_FMT
 		Size: Discrete 1920x1080
 			Interval: Discrete 0.017s (60.000 fps)
 ```
+
+## GStreamer
+[Pipeline](https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html?gi-language=c)
