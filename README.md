@@ -46,5 +46,10 @@ ioctl: VIDIOC_ENUM_FMT
 			Interval: Discrete 0.017s (60.000 fps)
 ```
 
+## v4l2-ctl Command Not Found
+```
+sudo apt install v4l-utils
+```
+
 ## GStreamer
 [Pipeline](https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html?gi-language=c)
