@@ -59,3 +59,6 @@ sudo apt install v4l-utils
 
 ## GStreamer
 [Pipeline](https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html?gi-language=c)
+
+## Check i2C information
+[i2cdetect](https://manpages.ubuntu.com/manpages/focal/man8/i2cdetect.8.html)
