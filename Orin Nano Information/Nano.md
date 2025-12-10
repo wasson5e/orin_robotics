@@ -52,9 +52,16 @@ bash ./install_opencv4.10.0_Jetpack6.1.sh
 ## Install PyTorch
 [PyTorch Compatibility](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform-release-notes/pytorch-jetson-rel.html)
 [Steps](https://ninjalabo.ai/blogs/jetson_pytorch.html)
+
+### Install cuSPARSElt
+https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
 ```
-vim cuSPARSELt.sh
-chmod +x cuSPARSELt.sh && sudo bash ./cuSPARSELt.sh
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/arm64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cusparselt
+```
+```
 pip3 install --no-cache https://developer.download.nvidia.com/compute/redist/jp/v61/pytorch/torch-2.5.0a0+872d972e41.nv24.08.17622132-cp310-cp310-linux_aarch64.whl
 sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libopenblas-dev libavcodec-dev libavformat-dev libswscale-dev
 git clone --branch release/0.23 https://github.com/pytorch/vision torchvision
@@ -83,7 +90,7 @@ deactivate
 
 
 
-## TTL Connection Informatione
+## TTL Connection Information
 - [TTL](https://www.jetson-ai-lab.com/initial_setup_jon.html)
 
 | Color | Pin |
