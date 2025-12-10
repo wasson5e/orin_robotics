@@ -79,6 +79,7 @@ pip freeze > requirements.txt
 python -m venv ~/Documents/yolo
 source ~/Documents/yolo/bin/activate
 deactivate
+```
 
 
 
@@ -92,6 +93,7 @@ deactivate
 | Black | 7 |
 
 ## Jetpack Version
+
 ```
 (base) awasson@orinnano:~/Downloads$ sudo apt show nvidia-jetpack
 Package: nvidia-jetpack
@@ -110,6 +112,7 @@ Description: NVIDIA Jetpack Meta Package
 ```
 
 ## Cuda Information
+
 ```
 (base) awasson@orinnano:~/Downloads$ nvcc --version
 nvcc: NVIDIA (R) Cuda compiler driver
