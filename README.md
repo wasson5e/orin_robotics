@@ -1,5 +1,11 @@
 # Orin Robotics
 
+## Nvidia Links
+[PyTorch Orin Nano](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html)
+
+## Testing Commands
+
+
 ## Label-Studio-Converter
 ```
 (label-studio) root@94c756140b69:/orin-robotics# label-studio-converter import coco -h
