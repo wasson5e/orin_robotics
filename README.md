@@ -4,7 +4,7 @@
 [PyTorch Orin Nano](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html)
 
 ## Testing Commands
-
+`nvgstcapture-1.0 --orientation 2` - Opens the camera and rotates 180 due to being flipped
 
 ## Label-Studio-Converter
 ```
