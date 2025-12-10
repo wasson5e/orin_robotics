@@ -118,3 +118,6 @@ Built on Wed_Aug_14_10:14:07_PDT_2024
 Cuda compilation tools, release 12.6, V12.6.68
 Build cuda_12.6.r12.6/compiler.34714021_0
 ```
+
+## OpenCV 4.12.0 Documentation
+https://docs.opencv.org/4.12.0/
