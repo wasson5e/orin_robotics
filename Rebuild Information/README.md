@@ -96,7 +96,16 @@ sudo apt install v4l-utils
 1) Create the python environment
 `mkdir ~/Documents/cvision && cd cvision && python -m venv . && source bin/activate`
 
-### Install PyTorch
+### Install cuSPARSElt (Step 1)
+https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/arm64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cusparselt
+```
+
+### Install PyTorch (Step 2)
 [PyTorch Compatibility](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform-release-notes/pytorch-jetson-rel.html)
 [Steps](https://ninjalabo.ai/blogs/jetson_pytorch.html)
 
@@ -109,13 +118,4 @@ python3 setup.py install --user # remove --user if installing in virtualenv
 
 #might want to try this first - seems like it worked
 pip install torch==2.9.0+cu126 torchvision==0.23.0 torchaudio==2.9.0 --index-url https://download.pytorch.org/whl/cu126
-```
-
-### Install cuSPARSElt
-https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
-```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/arm64/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt-get update
-sudo apt-get -y install cusparselt
 ```
