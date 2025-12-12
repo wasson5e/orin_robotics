@@ -16,7 +16,7 @@ Change root to `APPEND ${cbootargs} root=/dev/nvme0n1p1`
 5) Shutdown the Nano, and remove the SDCard
 6) Boot nano and finish installation
 
-## Fix Browser Issue - if there
+## Fix Browser Issue - if there is one
 ```
 sudo snap download snapd --revision=24724
 sudo snap ack snapd_24724.assert
