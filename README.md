@@ -62,3 +62,11 @@ sudo apt install v4l-utils
 
 ## Check i2C information
 [i2cdetect](https://manpages.ubuntu.com/manpages/focal/man8/i2cdetect.8.html)
+
+## Python VENV
+[VENV](https://docs.python.org/3/library/venv.html)
+[Other VENV](https://python.land/virtual-environments/virtualenv)
+- Create a new environment off of other venv
+```
+pip freeze > requirements.txt
+```

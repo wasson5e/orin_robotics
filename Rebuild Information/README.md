@@ -26,3 +26,65 @@ sudo snap refresh --hold snapd
 
 ## SSH Keys for github
 `ssh-keygen`
+
+## Git Commands
+Clone the repo using SSH
+`git add <file>`
+`git commit -m 'MESSAGE'`
+`git push`
+
+## Install Jetpack
+```
+sudo apt update
+sudo apt install -y nvidia-jetpack
+sudo apt show nvidia-jetpack
+```
+
+## Fix NVCC
+[Nvidia Developer](https://forums.developer.nvidia.com/t/cuda-nvcc-not-found/118068)
+```
+vim ~/.bashrc
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+## Install Common Python3 packages
+`sudo apt install python3-pip python3-setuptools python3-venv -y`
+
+## Install Jetson-Stats
+[Repo](https://github.com/rbonghi/jetson_stats)
+```
+sudo pip3 install -U jetson-stats
+sudo reboot
+```
+
+## ReInstall OpenCV with Cuda
+Copy this file to Downloads https://raw.githubusercontent.com/AastaNV/JEP/refs/heads/master/script/install_opencv4.10.0_Jetpack6.1.sh
+```
+wget https://raw.githubusercontent.com/AastaNV/JEP/refs/heads/master/script/install_opencv4.10.0_Jetpack6.1.sh
+chmod +x install_opencv4.10.0_Jetpack6.1.sh
+bash ./install_opencv4.10.0_Jetpack6.1.sh
+```
+
+## Install PyTorch
+[PyTorch Compatibility](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform-release-notes/pytorch-jetson-rel.html)
+[Steps](https://ninjalabo.ai/blogs/jetson_pytorch.html)
+
+### Install cuSPARSElt
+https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/arm64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cusparselt
+```
+
+```
+pip3 install --no-cache https://developer.download.nvidia.com/compute/redist/jp/v61/pytorch/torch-2.5.0a0+872d972e41.nv24.08.17622132-cp310-cp310-linux_aarch64.whl
+sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libopenblas-dev libavcodec-dev libavformat-dev libswscale-dev
+git clone --branch release/0.23 https://github.com/pytorch/vision torchvision
+cd torchvision && export BUILD_VERSION=0.23.0
+python3 setup.py install --user # remove --user if installing in virtualenv
+
+#might want to try this first - seems like it worked
+pip install torch==2.9.0+cu126 torchvision==0.23.0 torchaudio==2.9.0 --index-url https://download.pytorch.org/whl/cu126
+```
