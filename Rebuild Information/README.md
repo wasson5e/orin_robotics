@@ -88,3 +88,6 @@ python3 setup.py install --user # remove --user if installing in virtualenv
 #might want to try this first - seems like it worked
 pip install torch==2.9.0+cu126 torchvision==0.23.0 torchaudio==2.9.0 --index-url https://download.pytorch.org/whl/cu126
 ```
+
+## Enable camera configuration
+`/opt/nvidia/jetson-io/jetson-io.py`
