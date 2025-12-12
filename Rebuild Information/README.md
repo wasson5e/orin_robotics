@@ -65,18 +65,40 @@ chmod +x install_opencv4.10.0_Jetpack6.1.sh
 bash ./install_opencv4.10.0_Jetpack6.1.sh
 ```
 
-## Install PyTorch
+## Camera Configuration - Jetson Orin Nano
+- Camera in use [IMX477](https://www.arducam.com/arducam-12mp-imx477-motorized-focus-high-quality-camera-for-jetson.html)
+- Configuration script - I set it for dual IMX477
+`sudo /opt/nvidia/jetson-io/jetson-io.py`
+- reboot the system
+- check that the camera was found
+`ls /dev/video*'
+- check video information
+```
+awasson@orinnano:~$ v4l2-ctl --list-formats-ext
+ioctl: VIDIOC_ENUM_FMT
+	Type: Video Capture
+
+	[0]: 'RG10' (10-bit Bayer RGRG/GBGB)
+		Size: Discrete 4032x3040
+			Interval: Discrete 0.048s (21.000 fps)
+		Size: Discrete 3840x2160
+			Interval: Discrete 0.033s (30.000 fps)
+		Size: Discrete 1920x1080
+			Interval: Discrete 0.017s (60.000 fps)
+```
+
+## v4l2-ctl Command Not Found
+```
+sudo apt install v4l-utils
+```
+
+## Install the following in a python environment (safety first)
+1) Create the python environment
+`mkdir ~/Documents/cvision && cd cvision && python -m venv . && source bin/activate`
+
+### Install PyTorch
 [PyTorch Compatibility](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform-release-notes/pytorch-jetson-rel.html)
 [Steps](https://ninjalabo.ai/blogs/jetson_pytorch.html)
-
-### Install cuSPARSElt
-https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
-```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/arm64/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt-get update
-sudo apt-get -y install cusparselt
-```
 
 ```
 pip3 install --no-cache https://developer.download.nvidia.com/compute/redist/jp/v61/pytorch/torch-2.5.0a0+872d972e41.nv24.08.17622132-cp310-cp310-linux_aarch64.whl
@@ -89,5 +111,11 @@ python3 setup.py install --user # remove --user if installing in virtualenv
 pip install torch==2.9.0+cu126 torchvision==0.23.0 torchaudio==2.9.0 --index-url https://download.pytorch.org/whl/cu126
 ```
 
-## Enable camera configuration
-`/opt/nvidia/jetson-io/jetson-io.py`
+### Install cuSPARSElt
+https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/arm64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cusparselt
+```
