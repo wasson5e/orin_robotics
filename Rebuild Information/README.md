@@ -126,3 +126,9 @@ pip install torch==2.9.0+cu126 torchvision==0.23.0 torchaudio==2.9.0 --index-url
 
 ## Build safety
 When the system is working, change the "Subscribed to" updates to "Security and recommended updates" or "Security Only" since the last packages broke everything.
+
+## JTop / Jetson-Stats - Jetpack Not Detected
+- Get the Jetpack verson and L4T version
+`cat /etc/nv_tegra_release`
+`sudo apt show nvidia-jetpack`
+- Install Jetson_Stats and update the code per [HERE](https://rnext.it/jetson_stats/contributing.html)
