@@ -4,3 +4,5 @@ YOLO/training/images
 YOLO/coco
 Orin Nano Information/jetson-orin-nano-devkit-super-SD-image_JP6.2.1.zip
 YOLO/dataset.zip
+.DS_Store
+Initial Board Build/*.img
