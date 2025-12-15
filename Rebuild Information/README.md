@@ -119,3 +119,10 @@ python3 setup.py install --user # remove --user if installing in virtualenv
 #might want to try this first - seems like it worked
 pip install torch==2.9.0+cu126 torchvision==0.23.0 torchaudio==2.9.0 --index-url https://download.pytorch.org/whl/cu126
 ```
+
+## Git information
+1) recreated SSH keys on nano
+2) reinstall sublime and sublime merge
+
+## Build safety
+When the system is working, change the "Subscribed to" updates to "Security and recommended updates" or "Security Only" since the last packages broke everything.
