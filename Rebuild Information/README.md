@@ -94,7 +94,7 @@ sudo apt install v4l-utils
 
 ## Install the following in a python environment (safety first)
 1) Create the python environment
-`mkdir ~/Documents/cvision && cd cvision && python -m venv . && source bin/activate`
+`mkdir ~/Documents/cvision && cd ~/Documents/cvision && python -m venv . && source bin/activate`
 
 ### Install cuSPARSElt (Step 1)
 https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
