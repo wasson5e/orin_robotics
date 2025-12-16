@@ -144,3 +144,7 @@ pair ED:C0:A9:84:CC:64
 connect ED:C0:A9:84:CC:64
 exit
 ```
+
+
+## Ultralytics on Jetson Orin Nano
+[Link](https://docs.ultralytics.com/guides/nvidia-jetson/#jetpack-support-based-on-jetson-device)
