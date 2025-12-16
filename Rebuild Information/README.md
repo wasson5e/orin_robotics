@@ -132,3 +132,15 @@ When the system is working, change the "Subscribed to" updates to "Security and 
 `cat /etc/nv_tegra_release`
 `sudo apt show nvidia-jetpack`
 - Install Jetson_Stats and update the code per [HERE](https://rnext.it/jetson_stats/contributing.html)
+
+## Repair keyboard through CLI
+```
+bluetoothctl
+scan on - look for ED:C0:A9:84:CC:64 ProtoArc
+devices
+scan off
+trust ED:C0:A9:84:CC:64
+pair ED:C0:A9:84:CC:64
+connect ED:C0:A9:84:CC:64
+exit
+```
