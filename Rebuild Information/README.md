@@ -148,3 +148,19 @@ exit
 
 ## Ultralytics on Jetson Orin Nano
 [Link](https://docs.ultralytics.com/guides/nvidia-jetson/#jetpack-support-based-on-jetson-device)
+
+- Make the directory
+`mkdir ~/Documents/Ultralytics && python -m venv --system-site-packages . && source bin/activate`
+
+- Install Ultralytics
+```
+pip install ultralytics
+  
+pip install https://github.com/ultralytics/assets/releases/download/v0.0.0/torch-2.5.0a0+872d972e41.nv24.08-cp310-cp310-linux_aarch64.whl
+  
+pip install https://github.com/ultralytics/assets/releases/download/v0.0.0/torchvision-0.20.0a0+afc54f7-cp310-cp310-linux_aarch64.whl
+  
+pip install https://github.com/ultralytics/assets/releases/download/v0.0.0/onnxruntime_gpu-1.23.0-cp310-cp310-linux_aarch64.whl
+  
+pip install numpy==1.23.5
+```
